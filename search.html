@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results - Shilling The Reviews</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Search Results</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="trivia.html">Music Trivia</a></li>
+            </ul>
+        </nav>
+        <form action="search.html" method="get" class="search-form">
+            <input type="text" name="query" placeholder="Search reviews...">
+            <button type="submit">Search</button>
+        </form>
+    </header>
+    <main>
+        <section id="search-results">
+            <h2>Search Results for "<span id="search-query"></span>"</h2>
+            <div id="results">
+                <!-- Search results go here -->
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Shilling The Reviews. All rights reserved.</p>
+    </footer>
+    <script src="search.js"></script>
+</body>
+</html>
