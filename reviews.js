@@ -10,6 +10,9 @@ document.addEventListener('DOMContentLoaded', function() {
             // Get the first three reviews
             const firstThreeReviews = data.slice(0, 3);
 
+            // Clear any existing content in the review container
+            reviewContainer.innerHTML = '';
+
             // Display the first three reviews like search results
             firstThreeReviews.forEach(review => {
                 const reviewPreview = document.createElement('article');
