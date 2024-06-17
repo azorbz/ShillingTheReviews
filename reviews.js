@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             reviews.forEach(review => {
                 const reviewElement = document.createElement('div');
-                reviewElement.classList.add('review');
+                reviewElement.classList.add('review', 'bubble');
 
                 const titleElement = document.createElement('h2');
                 const titleLink = document.createElement('a');
