@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     fetch('reviews.json')
         //.then(response => response.json())
         .then(reviews => {
+            console.log(typeof reviews);
             reviews.forEach(review => {
                 const reviewElem = document.createElement('article');
                 reviewElem.innerHTML = `
