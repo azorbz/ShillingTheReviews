@@ -1,44 +1,37 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const resultsContainer = document.getElementById('results-container');
+    const reviewContainer = document.getElementById('review-previews');
 
-    fetch('reviews.json')
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.json();
-        })
-        .then(reviews => {
-            if (!Array.isArray(reviews) || reviews.length === 0) {
-                throw new Error('Reviews data is not valid or empty');
-            }
+    // Replace with actual URL or local path to your JSON file
+    const reviewsUrl = 'reviews.json';
 
-            reviews.forEach(review => {
-                const reviewElement = document.createElement('div');
-                reviewElement.classList.add('review', 'bubble');
+    fetch(reviewsUrl)
+        .then(response => response.json())
+        .then(data => {
+            data.forEach(review => {
+                // Create review preview element
+                const reviewPreview = document.createElement('div');
+                reviewPreview.classList.add('review', 'bubble');
 
-                const titleElement = document.createElement('h2');
+                // Create title and link
                 const titleLink = document.createElement('a');
                 titleLink.textContent = review.title;
                 titleLink.href = review.link;
-                titleLink.target = '_blank'; // Open link in a new tab
-                titleElement.appendChild(titleLink);
+                titleLink.classList.add('review-title');
 
-                const summaryElement = document.createElement('p');
-                summaryElement.textContent = review.summary;
+                // Create preview content
+                const previewParagraph = document.createElement('p');
+                previewParagraph.textContent = review.preview;
+                previewParagraph.classList.add('preview-text');
 
-                reviewElement.appendChild(titleElement);
-                reviewElement.appendChild(summaryElement);
+                // Append title and preview to review preview
+                reviewPreview.appendChild(titleLink);
+                reviewPreview.appendChild(previewParagraph);
 
-                resultsContainer.appendChild(reviewElement);
+                // Append review preview to container
+                reviewContainer.appendChild(reviewPreview);
             });
         })
         .catch(error => {
             console.error('Error fetching or processing reviews:', error);
-            if (resultsContainer) {
-                resultsContainer.innerHTML = '<p>Failed to load reviews. Please try again later.</p>';
-            } else {
-                console.error('resultsContainer is null');
-            }
         });
 });
