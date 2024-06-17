@@ -71,3 +71,26 @@ article {
 }
 
     article h3
+#results-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.review {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.review h2 {
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+.review p {
+    margin-bottom: 0;
+    line-height: 1.6;
+}
