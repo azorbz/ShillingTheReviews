@@ -73,7 +73,7 @@ section#reviews {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.review h3 {
+.review h2 {
     margin-top: 0;
     font-size: 1.5rem;
 }
