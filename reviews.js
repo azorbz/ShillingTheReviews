@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 // Create preview content
                 const previewParagraph = document.createElement('p');
-                previewParagraph.textContent = review.preview;
+                previewParagraph.textContent = review.summary;
                 previewParagraph.classList.add('preview-text');
 
                 // Append title and preview to review preview
