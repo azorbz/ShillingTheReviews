@@ -7,10 +7,13 @@ document.addEventListener('DOMContentLoaded', function() {
     fetch(reviewsUrl)
         .then(response => response.json())
         .then(data => {
-            data.forEach(review => {
-                // Create review preview element
-                const reviewPreview = document.createElement('div');
-                reviewPreview.classList.add('review', 'bubble');
+            // Get the first three reviews
+            const firstThreeReviews = data.slice(0, 3);
+
+            // Display the first three reviews like search results
+            firstThreeReviews.forEach(review => {
+                const reviewPreview = document.createElement('article');
+                reviewPreview.classList.add('review-preview');
 
                 // Create title and link
                 const titleLink = document.createElement('a');
@@ -18,13 +21,17 @@ document.addEventListener('DOMContentLoaded', function() {
                 titleLink.href = review.link;
                 titleLink.classList.add('review-title');
 
+                // Create title element
+                const titleElem = document.createElement('h3');
+                titleElem.appendChild(titleLink);
+
                 // Create preview content
                 const previewParagraph = document.createElement('p');
                 previewParagraph.textContent = review.summary;
                 previewParagraph.classList.add('preview-text');
 
                 // Append title and preview to review preview
-                reviewPreview.appendChild(titleLink);
+                reviewPreview.appendChild(titleElem);
                 reviewPreview.appendChild(previewParagraph);
 
                 // Append review preview to container
