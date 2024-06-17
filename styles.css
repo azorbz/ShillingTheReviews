@@ -60,47 +60,11 @@ main h2 {
     color: #333;
 }
 
-article {
-    background-color: #fff;
-    padding: 20px;
-    margin: 20px auto;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 800px; /* Increased width for better readability */
-    text-align: left;
-}
-
-.review-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.review-header h2 {
-    margin: 0;
-    font-size: 2rem;
-}
-
-.score {
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 10px;
-    font-size: 1.2rem;
-}
-
-.divider {
-    margin: 20px 0;
-    border: none;
-    border-top: 1px solid #ccc;
-}
-
-.review-content {
+section#reviews {
     margin-top: 20px;
-    line-height: 1.6;
 }
 
-.bubble {
+.review {
     background-color: #f0f0f0;
     border: 1px solid #ccc;
     border-radius: 8px;
@@ -109,9 +73,22 @@ article {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.review-content p.meta {
-    color: #666;
-    font-style: italic;
+.review h3 {
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+.review .score {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1.2rem;
+}
+
+.review .content {
+    margin-top: 10px;
+    line-height: 1.6;
 }
 
 footer {
