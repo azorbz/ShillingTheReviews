@@ -3,13 +3,24 @@
     "title": "Rock 'n' Roll Star - David Bowie",
     "link": "rocknrollstar-review-17-06-2024.html",
     "summary": "9/10 - A near-perfect showcase of the rise of Ziggy Stardust",
-    "tags": [ "Rock", "2024" ]
+    "tags": [ "Rock", "2024", "Bowie", "David Bowie", "Rock n Roll Star"]
   },
   {
     "title": "Waiting In The Sky - David Bowie",
     "link": "waitinginthesky-review-17-06-2024",
     "summary": "5/10 - An decent release, but a disappointment on Record Store Day",
-    "tags":  ["Rock", "2024", "RSD"]
-
+    "tags":  ["Rock", "2024", "RSD", "Bowie", "David Bowie", "Waiting In The Sky"]
+  },
+  {
+    "title": "Mind Games EP - John Lennon",
+    "link": "mindgamesep-review-17-06-2024.html",
+    "summary": "10/10 - A perfect preview for Lennon's next Ultimate Collection",
+    "tags": ["Rock", "2024", "RSD", "Lennon", "John Lennon", "Mind Games"]
+  },
+  {
+    "title": "One Hand Clapping - Paul McCartney & Wings",
+    "link": "onehandclapping-review-18-06-2024.html",
+    "summary": "8/10 - A curious look at Wings at its best",
+    "tags": ["Rock", "2024", "One Hand Clapping", "Wings", "McCartney", "Paul McCartney"]
   }
 ]
